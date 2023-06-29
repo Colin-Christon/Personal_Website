@@ -236,7 +236,7 @@ header .scrolldown a:hover { color: #11ABB0; }
 
     @keyframes name-slide {
       0%{
-        transform: translateX(-40%);
+        transform: translateX(-400px);
       }
       100%{
         transform: translateX(0);
