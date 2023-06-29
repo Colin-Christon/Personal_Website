@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html  lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Colin Personal Website</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+	 <link rel="stylesheet" href="css/layout.css">
+
+   <!-- Icons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   <script>
+      function displayIndianDateTime() {
+      var options = { timeZone: 'Asia/Kolkata', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+      
+      function updateDateTime() {
+        var indianDateTime = new Date().toLocaleString('en-IN', options);
+        document.getElementById('datetime').textContent = indianDateTime;
+      }
+
+      setInterval(updateDateTime, 1000); // Update every second
+    }
+    
+    function animateCounter(element, start, end, duration) {
+      var range = end - start;
+      var current = start;
+      var increment = end > start ? 1 : -1;
+      var stepTime = Math.abs(Math.floor(duration / range));
+      
+      var timer = setInterval(function() {
+        current += increment;
+        element.textContent = current;
+        if (current == end) {
+          clearInterval(timer);
+        }
+      }, stepTime);
+    }
+    
+    //Visitor Count 
+    document.addEventListener('DOMContentLoaded', function() {
+      var counterElement = document.getElementById('counter');
+      var randomVisitorCount = Math.floor(Math.random() * 500) + 1;
+      counterElement.textContent = '0';
+      
+      setTimeout(function() {
+        counterElement.classList.add('animation');
+        animateCounter(counterElement, 0, randomVisitorCount, 500);
+      }, 1000);
+    });
+
+    //  name animation 
+    function animateText() {
+      var headlineElement = document.querySelector('.responsive-headline');
+      var text = "I'm _Colin_";
+      var animationDelay = 100; // Delay between each letter in milliseconds
+      var currentIndex = 0;
+      
+      setInterval(function() {
+        headlineElement.textContent = text.substr(0, currentIndex);
+        currentIndex = (currentIndex + 1) % (text.length + 1);
+      }, animationDelay);
+    }
+    
+
+
+   </script>
+   
+</head>
+
+<body onload="displayIndianDateTime()">
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+	         <li><a class="smoothscroll" href="#items">Resume</a></li>
+            <li><a class="smoothscroll" href="#project-line">Projects</a></li>
+            <li><a class="smoothscroll" href="#gallery-line">Gallery</a></li>
+            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+         <hr />
+         
+         </div>   
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div>
+            <img id="profile-img" src="./images/cartoon.avif">
+         </div>
+
+         <div class="banner-text">
+            <h1 class="responsive-headline">Hello ... &nbsp;  I'm  &nbsp;_Colin_ </h1>
+            <h3> <span>Student @ St Joseph Engineering College   | <span>Software Engineer</span> | </h3>
+            <h3><span>background pic: Binary 0's & 1's <span></h3>
+            <hr />
+            <ul class="social">
+               <li><a href="https://github.com/Colin-Christon" title="github"><i class="fa fa-github"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/colin-christon-dcruz-720263227/" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="mailto:colinchriston@gmail.com" title="mailto"><i class="fa fa-envelope"></i></a></li>
+               <!-- <li><a href="https://join.skype.com/invite/QjGfYjfvQS1t" title="skype"><i class="fa fa-skype"></i></a></li> -->
+            </ul>
+            <br>
+            <p id="datetime"></p>
+      
+            <h3 id="visited">Visitors</h3>
+         <div id="counter"></div>
+         </div>
+         
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+
+<!-- about section
+   ================================================== -->
+   <section id="about">  
+
+      <div class="row section-intro">
+         <div class="col-twelve">
+
+            <h5>About</h5>
+            <h1>Let me introduce myself.</h1>
+
+            <div class="intro-info">
+
+               <img src="images/colinpass2.jpg" alt="Profile Picture">
+
+               <p class="lead">I am a student of computer science who is passionate about using technology to improve our lives. I am well-versed in programming languages, data structures, and algorithms, and enjoy working with others and problem-solving.  </p>
+            </div>            
+
+         </div>         
+      </div> <!-- /section-intro -->
+
+      <div class="row about-content">
+
+         <div class="col-six tab-full">
+
+            <h3>Profile</h3>
+            <p>Currently i m pursuing my B.E, but  I am open to a new software engineering/Web development/startup opportunities. If you think I'm a good fit, please contant me via <a href="mailto:colinchriston@gmail.com">colinchriston@gmail.com</a>.</p>
+
+            <ul class="info-list">
+               <li>
+                  <strong>Fullname:</strong>
+                  <span>Colin Christon Dcruz</span>
+               </li>
+               <li>
+           
+                  <strong>Educational Qualification</strong>
+                        <br>
+                  <span>B.E in Computer Science (Pursuing)</span><br>
+                  <span> ----    @St Joseph Engineering College</span><br>
+                  <span> ---- CGPA : 9.16</span><br><br>
+
+                  <span>Pre University College</span><br>
+                  <span> ---- Sri Venkataramana pu college </span><br>
+                  <span> ---- Percentage : 87%</span><br><br>
+
+                  <span>SSLC </span><br>
+                  <span> ---- Loretto English Medium High School </span><br>
+                  <span> ---- Percentage : 91%</span><br>
+               </li>
+               <li>
+                  <strong>Email:</strong>
+                  <span>colinchriston@gmail.com</span>
+               </li>
+
+            </ul> <!-- /info-list -->
+
+         </div>
+
+         <div class="col-six tab-full">
+
+            <h3>Skills</h3>
+            <p>I'm a cell-like independent teamworker, strong in research and coding(competitive programming). My areas of expertise are computer science, network , and Data analysis. Below are highlights of my technical skills:</p>
+
+            <ul class="skill-bars">
+               <li>
+                  <div class="progress percent60"><span>60%</span></div>
+                  <strong>Mobile dev</strong>
+               </li>
+               <li>
+                  <div class="progress percent75"><span>75%</span></div>
+                  <strong>Python</strong>
+               </li>
+               <li>
+                  <div class="progress percent60"><span>60%</span></div>
+                  <strong>HTML/CSS/JS</strong>
+               </li>
+               <li>
+                  <div class="progress percent45"><span>45%</span></div>
+                  <strong>C/C++</strong>
+               </li>
+               <li>
+                  <div class="progress percent55"><span>55%</span></div>
+                  <strong>Java</strong>
+               </li>
+               <li>
+                  <div class="progress percent30"><span>30%</span></div>
+                  <strong>Flutter</strong>
+               </li>
+
+               
+      
+            </ul> <!-- /skill-bars -->    
+         </div>
+
+      </div>
+      <div class="items" id="items">
+         <div class="Box" >
+            <div class="innerbox">
+               <img  src="./icons/htmllogo.png"></img>
+            </div>
+         </div>
+         <div class="Box">
+            <div class="innerbox">
+               <img   class="cascade" src="./icons/css-3-logo-3.png"></img>
+            </div>
+         </div>
+         <div class="Box">
+            <div class="innerbox">
+               <img  src="./icons/docker-logo-1024x918.png"></img>
+            </div>
+         </div>
+         <div class="Box">
+            <div class="innerbox">
+               <image  src="./icons/javascript-logo.jpg"></image>
+            </div>
+         </div>
+         <div class="Box">
+            <div class="innerbox">
+               <image  src="./icons/sqllogo.webp"></image>
+            </div>
+         </div>
+         <!-- <div class="Box">
+            <div class="innerbox">
+               <image  class="github" src="./icons/GitHub-Logo.png"></image>
+            </div>
+         </div> -->
+      </div>
+
+      <div class="items">
+         <div class="Box" >
+            <div class="innerbox">
+               <img  src="./icons/flutter.jpg"></img>
+            </div>
+         </div>
+         <div class="Box">
+            <div class="innerbox">
+               <img  src="./icons/ciscologo.jpeg"></img>
+            </div>
+         </div>
+         <div class="Box">
+            <div class="innerbox">
+               <img  src="./icons/php_emblem.png"></img>
+            </div>
+         </div>
+         <div class="Box">
+            <div class="innerbox">
+               <image  src="./icons/pythonlogo.png"></image>
+            </div>
+         </div>
+         <div class="Box">
+            <div class="innerbox">
+               <image  src="./icons/cplus.png"></image>
+            </div>
+         </div>
+      </div>
+      
+
+      <div class="row button-section">
+         <div class="col-twelve">
+            <a href="files/colinchristonresume.pdf" title="Download CV" class="button button-primary">Download CV</a>
+            <br>
+         </div> 
+      </div> 
+      <div class="line" id="project-line">
+         <br>
+      </div>
+   </section> <!-- /process-->    
+
+
+   <!-- Project  Section
+   ================================================== -->
+   <section class="main-project" id="main-project">
+      <div class="project-heading">
+      <h1>PROJECTS</h1>
+      </div>
+   <div class="projects">
+
+      <div class="project">
+         <img src="./images/stockinvestment.jpg" alt="Project 1">
+         <div class="project-info">
+            <h3>Stock Investment Website</h3>
+            <p>A stock investment project typically involves the analysis and management of investments in stocks or equities. It
+            revolves around making informed decisions to buy, sell, or hold stocks with the objective of generating returns and
+            maximizing capital growth.</p>
+            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript , PHP ,MySQL </p>
+         </div>
+      </div>
+      <div class="project">
+         <img src="./images/quizzApp.avif" alt="Project 2">
+         <div class="project-info">
+            <h3>Quiz App </h3>
+            <p>The project topic "Quiz App" refers to the development of a software application designed to engage users in interactive
+            quizzes and tests. A Quiz App typically includes a collection of questions from various topics or subjects, allowing
+            users to test their knowledge and challenge themselves.</p>
+            <p><strong>Tech Stack:</strong> Java , XML , Android Studio</p>
+         </div>
+      </div>
+      <div class="project">
+         <img src="./images/cgproject.png" alt="Project 3">
+         <div class="project-info">
+            <h3>Homescape (CG)</h3>
+            <p>Homescape projects in computer graphics often aim to achieve a high level of visual fidelity and realism. Artists and
+            designers utilize various techniques and software tools to model and render the virtual spaces, including 3D modeling
+            software, texturing techniques, lighting simulations, and rendering engines.</p>
+            <p><strong>Tech Stack:</strong> C , GLUT Lib ,OpenGL</p>
+         </div>
+      </div>
+   </div>
+         <div class="line" id="gallery-line">
+            <br>
+         </div>
+</section>
+
+
+<!-- gallery page 
+-----------------------------------------------------
+----------------------------------------------------- -->
+<section class="main-gallery" id="main-gallery">
+   <div class="project-heading">
+      <h1>GALLERY</h1>
+   </div>
+<div class="gallery">
+   <div class="gallery-item">
+      <img src="./gallery/img1.avif" alt="Image 1">
+   </div>
+   <div class="gallery-item">
+      <img src="./gallery/img2.avif" alt="Image 2">
+   </div>
+   <div class="gallery-item">
+      <img src="./gallery/img3.avif" alt="Image 2">
+   </div>
+   <div class="gallery-item">
+      <img src="./gallery/img4.avif" alt="Image 2">
+   </div>
+   <div class="gallery" id="gallery-extra">
+      <div class="gallery-item">
+         <img src="./gallery/img5.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img6.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img7.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img8.avif" alt="Image 1">
+      </div>
+      <!-- Add more gallery items as needed -->
+      <div class="gallery-item">
+         <img src="./gallery/img23.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img10.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img11.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img12.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img13.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img14.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img15.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img16.avif" alt="Image 1">
+      </div>
+      <!-- Add more gallery items as needed -->
+      <div class="gallery-item">
+         <img src="./gallery/img17.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img18.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img19.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img20.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img21.avif" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+         <img src="./gallery/img22.avif" alt="Image 1">
+      </div>
+   
+   </div>
+</div>
+   
+
+<div class="section-button">
+      <a href="#gallery-line" class="button" id="gallery-button" >----More----</a>
+      <a href="#gallery-line" class="button" id="gallery-close">Close gallery</a>
+</div>
+
+<!-- script for gallery open and close -->
+
+
+<script>
+   var openFormBtn = document.getElementById('gallery-button');
+   var closeGallery=document.getElementById('gallery-close');
+   openFormBtn.addEventListener('click', function () {
+         // overlay.classList.add('active');
+         document.getElementById("gallery-extra").style.display = "flex";
+   });
+   closeGallery.addEventListener('click', function () {
+         // overlay.classList.add('active');
+         document.getElementById("gallery-extra").style.display = "none";
+      });
+   </script>
+
+<div class="line">
+   <br>
+</div>
+</section>
+
+   <!-- contact
+   ================================================== -->
+   <section id="contact">
+      <div class="row section-intro">
+         <div class="col-twelve">
+
+            <h5>Contact</h5>
+            <h1>I'd Love To Connect With You.</h1>
+
+            <p class="lead">Let me get to know more about you.</p>
+
+         </div> 
+      </div> <!-- /section-intro -->
+
+      <div class="row contact-info">
+
+         <div class="col-four tab-full">
+
+            <div class="icon">
+               <i class="fa fa-location-arrow"></i>
+            </div>
+
+            <h5>Where to find me</h5>
+
+            <p>
+            Kulshekar Mangalore <br>
+            DK, Karnataka<br>
+            India
+            </p>
+
+         </div>
+
+         <div class="col-four tab-full collapse">
+
+            <div class="icon">
+               <i class="icon-mail"></i>
+            </div>
+
+            <h5>Email Me At</h5>
+
+            <p ><a href="mailto:colinchriston@gmail.com" >colinchriston@gmail.com</a><br>         
+            </p>
+
+         </div>
+	      
+	 <div class="col-four tab-full collapse">
+
+            <div class="icon">
+               <i class="fa fa-linkedin"></i>
+            </div>
+
+            <h5>Let's Connect</h5>
+            <a href="https://www.linkedin.com/in/colin-christon-dcruz-720263227/" target="_blank">LinkedIn Profile</a>
+
+         </div>
+         
+      </div> <!-- /contact-info -->
+      
+   </section> <!-- /contact -->
+
+<!-- -------------------Contact form-------------------- -->
+   <div class="container">
+      <h1>Query Form</h1>
+      <p>For more queries, please fill out the form below:</p>
+      <a href="#overlay" class="button" id="open-form">Open Form</a>
+    </div>
+  
+<!-- Query form opening 
+================================================== -->
+    <div class="overlay" id="overlay">
+      <div class="popup">
+      <span class="close-btn" id="close-btn">X</span>
+        <h2>Query Form</h2>
+        <p></p>
+        
+        <form action="sample.php" method="POST" id="inquiry-form">
+  
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea><br>
+          
+          <input type="submit" value="Submit" id="submit-btn" class="submitquery">
+          <p id="submitted"></p>
+        </form>
+      </div>
+   </div> <!-- end of contact form -->
+
+
+   <script>
+      var openFormBtn = document.getElementById('open-form');
+   var overlay = document.getElementById('overlay');
+   var closeBtn = document.getElementById('close-btn');
+   var closeFormBtn = document.getElementById('close-form-btn');
+   var inquiryForm = document.getElementById('inquiry-form');
+   var submitBtn = document.getElementById('submit-btn');
+
+   openFormBtn.addEventListener('click', function() {
+     // overlay.classList.add('active');
+     document.getElementById("overlay").style.display = "flex";
+     document.getElementById("overlay").style.visibility = "visible";
+     document.getElementById("overlay").style.opacity = "1";
+     document.getElementById("overlay").style.marginBottom = "50px";
+   });
+
+   closeBtn.addEventListener('click', function() {
+     closeForm();
+     document.getElementById("overlay").style.display = "none";
+   });
+
+      inquiryForm.addEventListener('submit', function(e) {
+     e.preventDefault(); // Prevent form submission
+     // Add your form submission logic here
+     document.getElementById("name").value="";
+     document.getElementById("email").value="";
+      document.getElementById("message").value="";
+     document.getElementById("overlay").style.display = "none";
+     closeForm();
+   });
+
+   function closeForm() {
+     overlay.classList.remove('active');
+   }
+  </script>
+
+   
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="copyright">
+               <li>Edit by Colin Christon</li>
+               <li>&copy; Copyright 2023 @colin</li> 
+            </ul>
+
+         </div>
+         
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> 
+</body>
+
+</html>
