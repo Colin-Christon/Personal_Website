@@ -54,7 +54,7 @@ body { background: #0f0f0f; }
 header {
    position: relative;
    height: 800px;
-   min-height: 1100px;
+   min-height: 1000px;
    width: 100%;
    background: #161415 url("../images/newbackground.avif");
    background-size: cover !important;
@@ -83,7 +83,7 @@ header .banner {
 }
 
 
-.banner-text { width: 100%;
+header .banner-text { width: 100%;
   position: relative; 
   top: -70px; }
 header .banner-text h1 {
@@ -184,38 +184,19 @@ header .scrolldown a:hover { color: #11ABB0; }
         transform: translateX(0);
       }
     }
-
-  #profile-img {
-    height: 400px;
-    width: 400px;
-    position: absolute;
-    /* top: 150px;
-    right: 90px; */
-    top: 10%;
-    right: 5%;
-    /* overflow: hidden; */
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 0 10px #000;
-    z-index: 999;
-    animation: up-down 10s ease-in-out infinite;
-    /* Optional: If you want the image to appear above other elements */
-  }
-
-@media (max-width: 768px) {
-  .row.banner {
-    flex-direction: column;
-  }
-
-  .banner-text {
-    width: 100%;
-  }
-
-  #profile-img {
-    max-width: 50%;
-    align-self: flex-end;
-  }
-}
+    #profile-img{
+      height: 400px;
+        width: 400px;
+        position: absolute;
+        top: 300px;
+        right: 90px;
+          border-radius: 50%;
+          padding: 10px;
+          box-shadow: 0 0 10px #000;
+          z-index: 999;
+          animation: up-down 10s ease-in-out infinite;
+          /* Optional: If you want the image to appear above other elements */
+        }
         @keyframes up-down {
           0% {
             transform: translateY(0);
@@ -229,14 +210,12 @@ header .scrolldown a:hover { color: #11ABB0; }
           }
         }
       
-
     .responsive-headline{
       animation: name-slide 5s ease-in-out;
     }
-
     @keyframes name-slide {
       0%{
-        transform: translateX(-400px);
+        transform: translateX(-50%);
       }
       100%{
         transform: translateX(0);
