@@ -227,6 +227,18 @@ header .scrolldown a:hover { color: #11ABB0; }
             background-color: lightblue;
           }
         }
+
+  #visited{
+    animation: visitor-count 5s ease-in-out;
+  }
+  @keyframes visitor-count {
+    0%{
+      transform: translate(50%);
+    }
+    100%{
+      transform: translate(0%);
+    }
+  }
     
 
 /* primary navigation

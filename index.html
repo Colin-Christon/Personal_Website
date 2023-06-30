@@ -32,32 +32,32 @@
       setInterval(updateDateTime, 1000); // Update every second
     }
     
-    function animateCounter(element, start, end, duration) {
-      var range = end - start;
-      var current = start;
-      var increment = end > start ? 1 : -1;
-      var stepTime = Math.abs(Math.floor(duration / range));
+   //  function animateCounter(element, start, end, duration) {
+   //    var range = end - start;
+   //    var current = start;
+   //    var increment = end > start ? 1 : -1;
+   //    var stepTime = Math.abs(Math.floor(duration / range));
       
-      var timer = setInterval(function() {
-        current += increment;
-        element.textContent = current;
-        if (current == end) {
-          clearInterval(timer);
-        }
-      }, stepTime);
-    }
+   //    var timer = setInterval(function() {
+   //      current += increment;
+   //      element.textContent = current;
+   //      if (current == end) {
+   //        clearInterval(timer);
+   //      }
+   //    }, stepTime);
+   //  }
     
-    //Visitor Count 
-    document.addEventListener('DOMContentLoaded', function() {
-      var counterElement = document.getElementById('counter');
-      var randomVisitorCount = Math.floor(Math.random() * 500) + 1;
-      counterElement.textContent = '0';
+   //  //Visitor Count 
+   //  document.addEventListener('DOMContentLoaded', function() {
+   //    var counterElement = document.getElementById('counter');
+   //    var randomVisitorCount = Math.floor(Math.random() * 500) + 1;
+   //    counterElement.textContent = '0';
       
-      setTimeout(function() {
-        counterElement.classList.add('animation');
-        animateCounter(counterElement, 0, randomVisitorCount, 500);
-      }, 1000);
-    });
+   //    setTimeout(function() {
+   //      counterElement.classList.add('animation');
+   //      animateCounter(counterElement, 0, randomVisitorCount, 500);
+   //    }, 1000);
+   //  });
 
     //  name animation 
     function animateText() {
@@ -123,6 +123,37 @@
                <p id="datetime"></p>
          
                <h3 id="visited">Visitors</h3>
+               <script>
+                  function incrementVisitorCount() {
+                     // Check if the "visitorCount" key exists in localStorage
+                     if (localStorage.getItem("visitorCount")) {
+                        // Retrieve the current count from localStorage
+                        let count = parseInt(localStorage.getItem("visitorCount"));
+                        // Increment the count
+                        count++;
+                        // Update the count in localStorage
+                        localStorage.setItem("visitorCount", count);
+                     } else {
+                        // If "visitorCount" key doesn't exist, set the count to 100
+                        localStorage.setItem("visitorCount", 100);
+                     }
+                  }
+
+                  // Function to display the visitor count
+                  function displayVisitorCount() {
+                     // Get the visitor count from localStorage
+                     let count = localStorage.getItem("visitorCount");
+                     // Display the count on the page
+                     document.getElementById("visited").innerHTML = "Visitors: " + count;
+                  }
+
+                  // Call the incrementVisitorCount and displayVisitorCount functions when the window loads or reloads
+                  window.onload = function () {
+                     incrementVisitorCount();
+                     displayVisitorCount();
+                     displayIndianDateTime();
+                  };
+               </script>
                <div id="counter"></div>
             </div>
                <!-- <img id="profile-img" src="./images/cartoon.avif">  -->
