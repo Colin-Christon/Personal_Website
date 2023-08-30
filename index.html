@@ -13,6 +13,7 @@
     ================================================== -->
    <link rel="stylesheet" href="css/default.css">
 	 <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/home.css">
 
    <!-- Icons
 	================================================== -->
@@ -31,32 +32,7 @@
       setInterval(updateDateTime, 1000); // Update every second
     }
     
-   //  function animateCounter(element, start, end, duration) {
-   //    var range = end - start;
-   //    var current = start;
-   //    var increment = end > start ? 1 : -1;
-   //    var stepTime = Math.abs(Math.floor(duration / range));
-      
-   //    var timer = setInterval(function() {
-   //      current += increment;
-   //      element.textContent = current;
-   //      if (current == end) {
-   //        clearInterval(timer);
-   //      }
-   //    }, stepTime);
-   //  }
-    
-   //  //Visitor Count 
-   //  document.addEventListener('DOMContentLoaded', function() {
-   //    var counterElement = document.getElementById('counter');
-   //    var randomVisitorCount = Math.floor(Math.random() * 500) + 1;
-   //    counterElement.textContent = '0';
-      
-   //    setTimeout(function() {
-   //      counterElement.classList.add('animation');
-   //      animateCounter(counterElement, 0, randomVisitorCount, 500);
-   //    }, 1000);
-   //  });
+
 
     //  name animation 
     function animateText() {
@@ -79,9 +55,36 @@
 
 <body onload="displayIndianDateTime()">
 
+   <div class="hero">
+      <div class="hero-design"></div>
+      <nav>
+         <img src="./images/logo.png" alt="" class="logo">
+         <ul class="nav-list">
+            <li><a href="#" >HOME</a></li>
+            <li><a href="#about" >ABOUT</a></li>
+            <li><a href="#items" >RESUME</a></li>
+            <li><a href="#project-line" >PROJECTS</a></li>
+            <li><a href="#gallery-line" >GALLERY</a></li>
+            <li><a href="#contact" >CONTACT</a></li>
+         </ul>
+      </nav>
+      <div class="detail">
+         <div>
+         <h1>I,m Colin <span>Christon</span></h1>
+         <p>This is my official portfolio website to show all <br>
+         Details and work experience as a Computer Science student</p>
+         <a href="files/Colin_Christon Dcruz_Resume_.pdf">Download Resume</a>
+         </div>
+         <div class="images">
+            <img src="./images/colinpass2.jpg">
+         </div>
+      </div>
+      
+   </div>
+
    <!-- Header
    ================================================== -->
-   <header id="home">
+   <!-- <header id="home">
 
       <nav id="nav-wrap">
 
@@ -95,15 +98,15 @@
             <li><a class="smoothscroll" href="#project-line">Projects</a></li>
             <li><a class="smoothscroll" href="#gallery-line">Gallery</a></li>
             <li><a class="smoothscroll" href="#contact">Contact</a></li>
-         </ul> <!-- end #nav -->
+         </ul> 
 
          <hr />
          
          </div>   
 
-      </nav> <!-- end #nav-wrap -->
+      </nav>  end #nav-wrap -->
 
-      <div class="row banner">
+      <!-- <div class="row banner">
        
             <div class="banner-text">
                <h1 class="responsive-headline">Hello ...I'm  _Colin_ </h1>
@@ -116,7 +119,6 @@
                   <li><a href="https://github.com/Colin-Christon" title="github"><i class="fa fa-github"></i></a></li>
                   <li><a href="https://www.linkedin.com/in/colin-christon-dcruz-720263227/" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
                   <li><a href="mailto:colinchriston@gmail.com" title="mailto"><i class="fa fa-envelope"></i></a></li>
-                  <!-- <li><a href="https://join.skype.com/invite/QjGfYjfvQS1t" title="skype"><i class="fa fa-skype"></i></a></li> -->
                </ul>
                <br>
                <p id="datetime"></p>
@@ -124,29 +126,28 @@
                <h3 id="visited">Visitors</h3>
                <script>
                   function incrementVisitorCount() {
-                     // Check if the "visitorCount" key exists in localStorage
+                 
                      if (localStorage.getItem("visitorCount")) {
-                        // Retrieve the current count from localStorage
+                    
                         let count = parseInt(localStorage.getItem("visitorCount"));
-                        // Increment the count
+                   
                         count++;
-                        // Update the count in localStorage
+                       
                         localStorage.setItem("visitorCount", count);
                      } else {
-                        // If "visitorCount" key doesn't exist, set the count to 100
+                      
                         localStorage.setItem("visitorCount", 100);
                      }
                   }
 
-                  // Function to display the visitor count
                   function displayVisitorCount() {
-                     // Get the visitor count from localStorage
+               
                      let count = localStorage.getItem("visitorCount");
-                     // Display the count on the page
+                   
                      document.getElementById("visited").innerHTML = "Visitors: " + count;
                   }
 
-                  // Call the incrementVisitorCount and displayVisitorCount functions when the window loads or reloads
+                
                   window.onload = function () {
                      incrementVisitorCount();
                      displayVisitorCount();
@@ -155,7 +156,7 @@
                </script>
                <div id="counter"></div>
             </div>
-               <!-- <img id="profile-img" src="./images/cartoon.avif">  -->
+               
 
       </div>
 
@@ -163,7 +164,7 @@
          <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
       </p>
 
-   </header> <!-- Header End -->
+   </header> -->
 
 
 <!-- about section
@@ -191,7 +192,7 @@
          <div class="col-six tab-full">
 
             <h3>Profile</h3>
-            <p>Currently i m pursuing my B.E, but  I am open to a new software engineering/Web development/startup opportunities. If you think I'm a good fit, please contant me via <a href="mailto:colinchriston@gmail.com">colinchriston@gmail.com</a>.</p>
+            <p style="color: grey;">Currently i m pursuing my B.E, but  I am open to a new software engineering/Web development/startup opportunities. If you think I'm a good fit, please contant me via <a href="mailto:colinchriston@gmail.com">colinchriston@gmail.com</a>.</p>
 
             <ul class="info-list">
                <li>
@@ -226,7 +227,7 @@
          <div class="col-six tab-full">
 
             <h3>Skills</h3>
-            <p>I'm a cell-like independent teamworker, strong in research and coding(competitive programming). My areas of expertise are computer science, network , and Data analysis. Below are highlights of my technical skills:</p>
+            <p style="color: grey;">I'm a cell-like independent teamworker, strong in research and coding(competitive programming). My areas of expertise are computer science, network , and Data analysis. Below are highlights of my technical skills:</p>
 
             <ul class="skill-bars">
                <li>
@@ -331,7 +332,7 @@
 
       <div class="row button-section">
          <div class="col-twelve">
-            <a href="files/colinchristonresume.pdf" title="Download CV" class="button button-primary">Download CV</a>
+            <a href="files/Colin_Christon Dcruz_Resume_.pdf" title="Download CV" class="button button-primary">Download CV</a>
             <br>
          </div> 
       </div> 
@@ -518,7 +519,7 @@
 
             <h5>Where to find me</h5>
 
-            <p>
+            <p style="color: grey;">
             Kulshekar Mangalore <br>
             DK, Karnataka<br>
             India
