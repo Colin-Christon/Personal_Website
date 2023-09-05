@@ -98,5 +98,21 @@ span{
     clip-path: circle(600px at right 800px);
 
 }
+@media screen and (max-width: 1082px) {
+    .images img{
+        height: 350px;
+        width:350px
+    }
+}
+@media screen and (max-width: 966px) {
+    .images img {
+        height: 270px;
+        width: 270px
+    }
+}
 
+.social{
+    display: flex;
+    gap: 30px;
+}
 
